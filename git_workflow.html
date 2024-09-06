@@ -1,0 +1,48 @@
+<div id="preview-wrapper">
+    <div id="output" class="content markdown-body"><h1  style="text-align: center; margin-top: 25px; margin-bottom: 50px;">Git Workflow</h1>
+        <h3>C1 - Daca avem nevoie de un branch nou de la inceput</h3>
+        <ol>
+            <li><strong>git status</strong></li>
+            <li><strong>git checkout <code>&lt;nume-branch-principal&gt;</code></strong> (de obicei e main sau master)</li>
+            <li><strong>git pull origin <code>&lt;nume-branch-principal&gt;</code></strong> (de obicei e main sau master)</li>
+            <li><strong>git checkout -b <code>&lt;nume-branch-nou&gt;</code></strong> (cream un branch nou, de preferat de forma "creez-un-branch-nou")</li>
+            <li>modificam codul (ceea ce mi se cere sa fac in task)</li>
+            <li><strong>git add -A</strong> (adaugam modificarile - fisiere/foldere create/sterse, modificari de fisiere)</li>
+            <li><strong>git commit -m "mesaj"</strong> (incarcam modificarile in commit)</li>
+            <li><strong>git push origin <code>&lt;nume-branch-nou&gt;</code></strong> (adaugam commit-ul in respository remote)</li>
+            <li>intram pe client (github.com/bitbucket.com/gitlab.com etc) si cream pull request</li>
+            <li>notificam reviewerii de noul pull request ridicat</li>
+        </ol>
+        <h3>C2 - Daca continuam munca pe un branch deja creat</h3>
+        <ol>
+            <li><strong>git status</strong></li>
+            <li><strong>git checkout <code>&lt;nume-branch&gt;</code></strong> (branch-ul pe care am lucrat)</li>
+            <li><strong>git pull origin <code>&lt;nume-branch&gt;</code></strong> (branch-ul pe care am lucrat)</li>
+            <li>modificam codul (ceea ce mi se cere sa fac in task)</li>
+            <li><strong>git add -A</strong> (adaugam modificarile - fisiere/foldere create/sterse, modificari de fisiere)</li>
+            <li><strong>git commit -m "mesaj"</strong> (incarcam modificarile in commit)</li>
+            <li><strong>git push origin <code>&lt;nume-branch&gt;</code></strong> (adaugam commit-ul in respository remote)</li>
+            <li>intram pe client (github.com/bitbucket.com/gitlab.com etc) si cream pull request </li>
+            <li>notificam reviewerii de noul pull request ridicat</li>
+        </ol>
+        <h4>Nota de informare</h4>
+        <p>In cazul in care, nu am terminat munca, nu respectam pasii de creare a Pull Request-ului (9, 10 in C1 si 8,9 in C2) </p>
+        <h4>Bune practici</h4>
+        <ol>
+            <li>Este bine sa dati commit chiar daca nu ati terminat task-ul dar ati incheiat ziua de munca</li>
+            <li>Mesajele de commit sa fie sugestive cu ce ati facut voi (ca si functionalitate nu modificari de fisiere)</li>
+            <li>Este bine ca in momentul in care dati commit sa nu aveti erori (comentati liniile/fisierele care dau erori mai bine)</li>
+            <li>In mod regulat sa tineti proiectul local la zi cu cel din remote (git pull origin main regulat)</li>
+        </ol>
+    </div>
+</div>
+<style media="print">
+    @page {
+        size: auto;
+        margin: 0;
+    }
+    .markdown-body {
+        margin-left: 35px;
+        margin-right: 35px;
+    }
+</style>

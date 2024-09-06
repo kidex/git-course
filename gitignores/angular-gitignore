@@ -1,0 +1,23 @@
+# Node modules
+node_modules/
+
+# Compiled output
+dist/
+build/
+
+# Log files
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Environment files
+.env
+
+# Angular specific
+.angular/
